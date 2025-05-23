@@ -11,7 +11,7 @@ struct FWebSocketConfig
 
 	/** WebSocket 连接地址 */
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, config, Category="WebSocket")
-	FString Url = TEXT("ws://localhost:8000");
+	FString Url = TEXT("ws://127.0.0.1:8000");
 
 	/** 启动时是否自动连接 */
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, config, Category="WebSocket")
