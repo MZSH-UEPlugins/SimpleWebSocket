@@ -1,4 +1,6 @@
-﻿#include "SimpleWebSocketSubsystem.h"
+﻿// mengzhishanghun 2025 All Rights Reserved.
+
+#include "SimpleWebSocketSubsystem.h"
 #include "WebSocketsModule.h"
 #include "IWebSocket.h"
 #include "SimpleWebSocketLog.h"

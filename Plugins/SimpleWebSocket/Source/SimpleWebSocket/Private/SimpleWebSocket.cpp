@@ -1,4 +1,4 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
+// mengzhishanghun 2025 All Rights Reserved.
 
 #include "SimpleWebSocket.h"
 
