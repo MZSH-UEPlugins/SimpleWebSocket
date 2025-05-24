@@ -1,92 +1,63 @@
-# UEPluginDevTemplate 插件开发模板
+# SimpleWebSocket Plugin
 
-这是一个用于开发 Unreal Engine 插件的通用项目模板，包含：
+## 📖 Overview
 
-- 一个标准的空白 UE 项目 (`.uproject`)；
-- 可直接放置插件到 `Plugins/` 下进行开发与测试；
-- 自带通用 `.gitignore`、LICENSE 文件、README 结构；
-- 可用于快速搭建多个插件的测试与迭代环境；
-- 支持 PR 合并流程配置与规范提交记录（适合长期维护）。
+**SimpleWebSocket** is a lightweight Unreal Engine plugin that enables seamless WebSocket communication directly from Blueprints. It is designed for developers who need real-time two-way data transfer between UE and external servers without writing C++.
 
 ---
 
-## 📁 项目结构说明
+## 🔧 Features
 
-```
-UEPluginDevTemplate/
-├── Plugins/                  # 插件开发目录，支持多个插件共存
-│   └── YourPlugin/
-│       ├── Source/
-│       ├── Content/
-│       └── YourPlugin.uplugin
-├── LICENSE                   # 通用英文许可证（可商用，禁止转售）
-├── README.md                 # 本说明文件
-├── .gitignore                # 已配置常用中间目录屏蔽
-├── UEPluginDevTemplate.uproject
-```
+- 📡 Connect to any WebSocket server (ws:// only)
+- 🔁 Multiple named WebSocket connections
+- 🧠 Blueprint-accessible API for connect, send, and close
+- 🧩 Message binding using Blueprint delegates
+- 🚀 Optional auto-connect on project start
+- 📦 Fully tested: works correctly in packaged builds
 
 ---
 
-## 📄 使用方式
+## 📝 Usage Notes
 
-1. 通过 GitHub 点击 "Use this template" 按钮，创建新的插件开发仓库；
-2. 修改 `Plugins/YourPlugin/` 目录为你的插件名称并放入源码；
-3. 使用 Rider / Visual Studio 打开 `.uproject` 进行开发；
-4. 插件功能可在项目中直接调试测试；
-5. 插件开发完成后，可通过打包脚本导出 `.zip` 用于发布；
-6. 所有提交应通过 Pull Request 合并到主分支（main）；
+- ✅ **Packaging Support**: The plugin works as expected in packaged builds (Windows).
+- ⚠️ **Connection Tip**: Do **not** use `localhost` as the server address. Always use `127.0.0.1` to avoid connection issues in packaged games.
 
 ---
 
-## 🔀 Pull Request 流程建议
+## 📚 Documentation
 
-为了保持清晰的提交历史与项目质量，建议每次合并遵循以下规则：
-
-- ✅ 使用 Squash merge 方式合并 PR；
-- ✅ 配置默认合并信息为：**Pull request title and commit details**；
-- ✅ 所有分支合并主分支（main）都应通过 PR 执行；
-- ✅ 合并后自动删除分支，保持仓库整洁；
-- ✅ 推荐开启线性历史（Require linear history）防止 merge commit 污染。
+Step-by-step usage instructions and blueprint examples are available in:  
+[`./Docs/README.md`](./Docs/README.md)
 
 ---
 
-## 📜 许可证说明
+## 📄 License Summary
 
-本模板附带的 `LICENSE` 文件为自定义英文授权协议：
+This plugin is licensed for use in Unreal Engine projects, both personal and commercial.  
+You may:
 
-- ✅ 允许在个人或商业项目中自由使用、修改；
-- ❌ 禁止二次出售、转售、打包传播此模板本体；
-- 📮 有任何建议或问题可联系作者：`mengzhishanghun@outlook.com`
+- ✔ Use this plugin in your own projects (commercial or non-commercial)  
+- ✔ Modify the source code for internal use  
 
-你可以直接使用该 LICENSE 于你自己的插件项目中，无需修改。
+You may **not**:
 
----
+- ❌ Redistribute, republish, or resell the plugin as-is or with modifications  
+- ❌ Include the plugin in any software or asset bundle without written permission  
 
-## 📌 源码头部声明规范
-
-建议每个 `.h` 和 `.cpp` 文件添加如下声明，以明确插件归属与使用约定：
-
-```cpp
-// Licensed under custom terms by mengzhishanghun.
-// Commercial use allowed. Redistribution is prohibited.
-// Contact: mengzhishanghun@outlook.com
-```
-
-你可以根据此模板批量添加到所有源文件中，以提升项目的专业性与合规性。
+📄 Full license text is available in the [LICENSE](./LICENSE) file.
 
 ---
 
-## 🧑‍💻 适用场景
+## ⚠️ Disclaimer
 
-- 插件原型开发 / 框架验证 / 性能测试；
-- 多插件并行开发测试；
-- 提交到 FAB 或 GitHub 前的发布打包准备环境。
+This plugin is provided “as is” with no guarantees. The author assumes no responsibility for any issues, bugs, or damages resulting from its use.  
+Use at your own risk.
+
+By using this plugin, you agree to the above license terms.
 
 ---
 
-## 📬 联系方式
+## 📮 Contact
 
-如有合作意向、插件开发定制、模板建议等，欢迎联系作者：
-
-**作者署名**：mengzhishanghun  
-**邮箱地址**：mengzhishanghun@outlook.com
+For questions, support, or licensing inquiries, please contact:  
+**mengzhishanghun@outlook.com**

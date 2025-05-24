@@ -1,35 +1,59 @@
-# 插件使用教程占位符 / Plugin User Guide Placeholder
+# 📘 SimpleWebSocket User Guide
 
-请将此文件替换为你自己的插件使用说明。
-
-Replace this file with the actual user guide for your plugin.
+This guide walks you through how to configure and use the SimpleWebSocket plugin to communicate via WebSocket in your Unreal Engine project.
 
 ---
 
-## 示例格式 / Example Format
+## 🛠️ Plugin Settings
 
-### 1. 插件安装说明 / Installation
+After enabling the plugin, go to the project settings panel under `Simple WebSocket Settings`.
 
-将本插件复制到 Unreal 项目的 Plugins 文件夹下，重启编辑器后自动加载。
+### Steps:
 
-Copy this plugin into your Unreal project's Plugins folder. It will load after restarting the editor.
+1. Open Unreal Engine Editor  
+2. Go to `Edit > Project Settings`  
+3. Scroll down and find `Simple WebSocket Settings`  
+4. Add a new WebSocket connection entry (e.g., named `Test`)  
+5. Enter the WebSocket address (recommended format: `ws://127.0.0.1:xxxx`, **do not use localhost**)  
+6. Enable **Auto Connect** (optional; if enabled, the connection will be established automatically at runtime)
+
+📷 Example screenshot:
+
+![WebSocket Settings](./Images/20250524103328.png)
 
 ---
 
-### 2. 使用方法 / Usage
+## 🎮 Blueprint Usage Example
 
-简要描述插件的主要功能、如何使用、常用设置和推荐使用方式。
+You can use GameInstance-level Blueprint functions to connect, send, receive, and close WebSocket connections. All functions are static and can be called from any Blueprint.
 
-Briefly describe the main features, usage, common settings, and best practices.
+### Available Nodes:
+
+- `Connect Web Socket`: Connect to a WebSocket by name  
+- `Send WebSocket Message`: Send a text message  
+- `Bind Web Socket Message`: Bind a Blueprint event to receive messages (supports multiple callbacks)  
+- `Close Web Socket`: Close a specific connection  
+- `Close All Web Socket`: Close all connections  
+- `Check Web Socket Connect`: Check if a connection is established  
+- `Get Web Socket Config`: Retrieve config for a named connection  
+- `Unbind Web Socket Message`: Unbind a message event  
+
+📷 Example Blueprint graph:
+
+![Blueprint Example](./Images/20250524104722.png)
 
 ---
 
-### 3. 注意事项 / Notes
+## ✅ Notes
 
-- 插件版本兼容范围
-- 不支持的功能
-- 常见问题与解决方案
+- The plugin only supports the `ws://` protocol. Secure `wss://` is **not** supported.
+- Fully tested in **packaged builds** — works as expected in production.
+- Avoid using `localhost` in WebSocket URLs. Always use `127.0.0.1` instead to prevent connection issues.
+- Each connection name can have multiple bound callbacks, allowing modular event handling.
 
-- Compatible versions
-- Known limitations
-- Troubleshooting tips
+---
+
+## 📮 Contact
+
+For questions, support, or licensing inquiries, contact:  
+**mengzhishanghun@outlook.com**

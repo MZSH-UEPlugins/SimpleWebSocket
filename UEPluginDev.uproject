@@ -20,7 +20,8 @@
 		},
 		{
 			"Name": "SimpleWebSocket",
-			"Enabled": true
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/Fab/product/f6d74f7e-1154-4c92-b026-2a5433b652e6"
 		}
 	]
 }
